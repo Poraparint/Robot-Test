@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.7 on darwin)" generated="2025-02-11T09:58:01.513703" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/Users/joinsmith3/Desktop/Robot/robot_test/test.robot">
+<test id="s1-t1" name="Search Products and Verify Cart After Login" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T09:58:02.096195" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T09:58:02.095422" elapsed="25.163050"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-11T09:58:27.261401" elapsed="0.419461"/>
+</kw>
+<kw name="Click Products Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T09:58:27.685184" level="INFO">Clicking element 'xpath=//a[@href='/products']'.</msg>
+<arg>xpath=//a[@href='/products']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T09:58:27.683570" elapsed="2.525178"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>All Products</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-11T09:58:30.209222" elapsed="0.020107"/>
+</kw>
+<status status="PASS" start="2025-02-11T09:58:27.682483" elapsed="2.547030"/>
+</kw>
+<kw name="Verify All Products Page">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T09:58:30.595938" level="INFO">${page_text} = CATEGORY</msg>
+<var>${page_text}</var>
+<arg>xpath=//h2</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T09:58:30.235642" elapsed="0.360738"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-11T09:58:30.597876" level="INFO">Found text: CATEGORY</msg>
+<arg>Found text: ${page_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-11T09:58:30.596924" elapsed="0.001085"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-02-11T09:58:30.599408" level="FAIL">'CATEGORY' does not contain 'All Products'</msg>
+<arg>${page_text}</arg>
+<arg>All Products</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-02-11T09:58:30.598238" elapsed="0.001821">'CATEGORY' does not contain 'All Products'</status>
+</kw>
+<status status="FAIL" start="2025-02-11T09:58:30.235052" elapsed="0.365518">'CATEGORY' does not contain 'All Products'</status>
+</kw>
+<kw name="Search Product">
+<status status="NOT RUN" start="2025-02-11T09:58:30.601236" elapsed="0.000089"/>
+</kw>
+<kw name="Verify Searched Products">
+<status status="NOT RUN" start="2025-02-11T09:58:30.601663" elapsed="0.000241"/>
+</kw>
+<kw name="Click On First Product">
+<status status="NOT RUN" start="2025-02-11T09:58:30.602992" elapsed="0.000109"/>
+</kw>
+<kw name="Add Products To Cart">
+<status status="NOT RUN" start="2025-02-11T09:58:30.603498" elapsed="0.000072"/>
+</kw>
+<kw name="Verify Products In Cart">
+<status status="NOT RUN" start="2025-02-11T09:58:30.604127" elapsed="0.000183"/>
+</kw>
+<kw name="Login And Verify Cart">
+<status status="NOT RUN" start="2025-02-11T09:58:30.610165" elapsed="0.000318"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-02-11T09:58:30.610963" elapsed="0.000053"/>
+</kw>
+<status status="FAIL" start="2025-02-11T09:58:02.093540" elapsed="28.518069">'CATEGORY' does not contain 'All Products'</status>
+</test>
+<status status="FAIL" start="2025-02-11T09:58:01.516852" elapsed="29.105762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="0" fail="1" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
