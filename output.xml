@@ -1,81 +1,1335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.7 on darwin)" generated="2025-02-11T10:04:36.693376" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.7 on darwin)" generated="2025-02-11T10:06:33.829650" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="/Users/joinsmith3/Desktop/Robot/robot_test/test.robot">
 <test id="s1-t1" name="Search Products and Verify Cart After Login" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:04:37.169365" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
+<msg time="2025-02-11T10:06:34.225058" level="INFO">Opening browser 'Chrome' to base url 'http://automationexercise.com'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-02-11T10:04:37.168966" elapsed="19.017332"/>
+<status status="PASS" start="2025-02-11T10:06:34.224630" elapsed="24.680048"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-02-11T10:04:56.188282" elapsed="0.348827"/>
+<status status="PASS" start="2025-02-11T10:06:58.907366" elapsed="0.379659"/>
 </kw>
 <kw name="Click Products Button">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:04:56.540858" level="INFO">Clicking element 'xpath=//a[@href='/products']'.</msg>
+<msg time="2025-02-11T10:06:59.289916" level="INFO">Clicking element 'xpath=//a[@href='/products']'.</msg>
 <arg>xpath=//a[@href='/products']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:04:56.540142" elapsed="3.751258"/>
+<status status="PASS" start="2025-02-11T10:06:59.289170" elapsed="4.354239"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
-<arg>All Products</arg>
+<arg>Products</arg>
 <arg>timeout=10s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2025-02-11T10:05:00.291879" elapsed="0.030408"/>
+<status status="PASS" start="2025-02-11T10:07:03.643781" elapsed="0.025738"/>
 </kw>
-<status status="PASS" start="2025-02-11T10:04:56.538626" elapsed="3.783925"/>
+<status status="PASS" start="2025-02-11T10:06:59.288155" elapsed="4.381950"/>
 </kw>
 <kw name="Verify All Products Page">
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-02-11T10:05:00.515424" level="INFO">${page_text} = CATEGORY</msg>
-<var>${page_text}</var>
-<arg>xpath=//h2</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-02-11T10:05:00.323718" elapsed="0.191774"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-11T10:07:05.672170" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-11T10:07:03.671271" elapsed="2.001117"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-02-11T10:05:00.516038" level="INFO">Found text: CATEGORY</msg>
-<arg>Found text: ${page_text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-02-11T10:05:00.515729" elapsed="0.000386"/>
+<kw name="Log Source" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:07:06.540288" level="INFO">&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="This is for automation practice"&gt;
+	&lt;meta name="robots" content="index"&gt;
+	&lt;meta name="keywords" content="Automation Exercise / Automation Practice / Practice website for automation / demo website for practice / dummy website for testing / testing website / dummy website for practice automation / API Testing / API automation"&gt;
+	&lt;meta name="google-site-verification" content="VS1KtEV7m0Pp9MRMwCpyR7rGwUVYH6N8l1zoVepsGWs"&gt;
+
+    &lt;title&gt;Automation Exercise - All Products&lt;/title&gt;
+
+	
+
+	&lt;link href="/static/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link href="/static/css/font-awesome.min.css" rel="stylesheet"&gt;
+    &lt;link href="/static/css/prettyPhoto.css" rel="stylesheet"&gt;
+    &lt;link href="/static/css/animate.css" rel="stylesheet"&gt;
+	&lt;link href="/static/css/main.css" rel="stylesheet"&gt;
+	&lt;link href="/static/css/responsive.css" rel="stylesheet"&gt;
+	&lt;link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"&gt;
+	&lt;link href="/static/css/cart.css" rel="stylesheet"&gt;
+
+	&lt;style&gt;
+
+		#submit_search {
+			font-size: 15px;
+			line-height: 18px;
+			padding: 10px 30px;
+			text-shadow: 0 1px 0 #fff;
+			margin-left: 404px;
+			margin-top: -61px;
+		}
+
+		#search_product {
+			height: 40px;
+			line-height: 20px;
+			padding: 0 10px;
+		}
+
+		#search {
+			margin-top: 40px !important;
+		}
+
+          /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 599px) {
+               #sale_image {
+					width: 280px !important;
+					height: 300px !important;
+				}
+
+				#search_product {
+					width: 200px !important;
+					margin-left: 50px !important;
+				}
+
+				#search {
+					margin-top: 0px !important;
+				}
+
+				#submit_search {
+					margin-left: 240px;
+				}
+            }
+
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) and (max-width: 768px) {
+                #sale_image {
+					width: 300px !important;
+					height: 300px !important;
+				}
+
+				#search_product {
+					width: 200px !important;
+					margin-left: 215px !important;
+				}
+
+				#search {
+					margin-top: -180px !important;
+				}
+            }
+
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                #sale_image {
+					width: 350px !important;
+					height: 300px !important;
+				}
+
+				#search_product {
+					width: 300px !important;
+					margin-left: 115px !important;
+				}
+
+				#search {
+					margin-top: -180px !important;
+				}
+            }
+
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                #sale_image {
+					width: 440px !important;
+					height: 300px !important;
+				}
+
+				#search {
+					margin-top: 75px !important;
+				}
+            }
+
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+				#sale_image {
+					width: 500px !important;
+					height: 300px !important;
+				}
+            }
+      &lt;/style&gt;
+
+    &lt;!--[if lt IE 9]&gt;
+    &lt;script src="/static/js/html5.js"&gt;&lt;/script&gt;
+    &lt;script src="/static/js/respond.min.js"&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+    &lt;link rel="shortcut icon" href="/static/images/home/short_logo.png"&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/images/ico/apple-touch-icon-144-precomposed.png"&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/images/ico/apple-touch-icon-114-precomposed.png"&gt;
+    &lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/images/ico/apple-touch-icon-72-precomposed.png"&gt;
+    &lt;link rel="apple-touch-icon-precomposed" href="/static/images/ico/apple-touch-icon-57-precomposed.png"&gt;
+
+
+	&lt;script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202502060101/reactive_library_fy2021.js"&gt;&lt;/script&gt;&lt;script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202502060101/show_ads_impl_fy2021.js"&gt;&lt;/script&gt;&lt;script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1677597403311019" crossorigin="anonymous" data-checked-head="true"&gt;&lt;/script&gt;
+
+&lt;meta http-equiv="origin-trial" content="AlK2UR5SkAlj8jjdEc9p3F3xuFYlF6LYjAML3EOqw1g26eCwWPjdmecULvBH5MVPoqKYrOfPhYVL71xAXI1IBQoAAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="&gt;&lt;meta http-equiv="origin-trial" content="Amm8/NmvvQfhwCib6I7ZsmUxiSCfOxWxHayJwyU1r3gRIItzr7bNQid6O8ZYaE1GSQTa69WwhPC9flq/oYkRBwsAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3NTgwNjcxOTksImlzU3ViZG9tYWluIjp0cnVlfQ=="&gt;&lt;meta http-equiv="origin-trial" content="A9wSqI5i0iwGdf6L1CERNdmsTPgVu44ewj8QxTBYgsv1LCPUVF7YmWOvTappqB1139jAymxUW/RO8zmMqo4zlAAAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"&gt;&lt;meta http-equiv="origin-trial" content="A+d7vJfYtay4OUbdtRPZA3y7bKQLsxaMEPmxgfhBGqKXNrdkCQeJlUwqa6EBbSfjwFtJWTrWIioXeMW+y8bWAgQAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MzY4MTI4MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"&gt;&lt;script async="" src="https://fundingchoicesmessages.google.com/i/ca-pub-1677597403311019?href=https%3A%2F%2Fautomationexercise.com%2Fproducts&amp;amp;ers=2"&gt;&lt;/script&gt;&lt;script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxUrCzmehn0G_vq706JJ26c7H9Lhf4PO3PvvQ5kxzpiVyDUN0WrK-Kw3MqMwdOh4nFDWgSksWwlktO3JYL3F0VFhTjEbeOYe_GXaCKiOQWVpVPW4FjsvPbQ1d4Mj5EHfEGvlNr0ieQ==?fccs=W1siQUtzUm9sX083UzR5M2lLZmZzbGpyQ1ktcE1zX25ZMnJ1NG94T2VKaW5tWGV5VjdyVm00LVVwZ25FdUo2bzRfZGZYS0FtenhOb1E3OGZEQWh2QlY4dmo0OTFZR01oQmNGa0xIbzVGWktPMG9JTTJWbXNtXzVfcWJZcERqTEptSjhqbXdRQkgzYU9yaW0zeFlxUmxfajcyVkstSTRKeHdVckVBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3MzkyNDMyMjEsOTg3MDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbN11dLCJodHRwczovL2F1dG9tYXRpb25leGVyY2lzZS5jb20vcHJvZHVjdHMiLG51bGwsW1s4LCJMN0lTeFlhMWd6YyJdLFs5LCJ0aCJdLFsyMywiMTczOTI0MzIyMCJdLFsxOSwiMiJdLFsxNywiWzBdIl0sWzI0LCJhdXRvbWF0aW9uZXhlcmNpc2UuY29tIl1dXQ"&gt;&lt;/script&gt;&lt;script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVCFEFiLb3C6557zBckTD-BgsNZhufhNqNvn2gEGPEhlPe-_yLWANZx_csGwx7uJnq5uXozkM0vkCA5hlOCv2mddBerBqmkyCm2bVWxBft0mtgJsyle3cBEGqwFhDwMHvX-VEBbCQ==?fccs=W1siQUtzUm9sX083UzR5M2lLZmZzbGpyQ1ktcE1zX25ZMnJ1NG94T2VKaW5tWGV5VjdyVm00LVVwZ25FdUo2bzRfZGZYS0FtenhOb1E3OGZEQWh2QlY4dmo0OTFZR01oQmNGa0xIbzVGWktPMG9JTTJWbXNtXzVfcWJZcERqTEptSjhqbXdRQkgzYU9yaW0zeFlxUmxfajcyVkstSTRKeHdVckVBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3MzkyNDMyMjIsNDIyMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw5XSxudWxsLDIsbnVsbCwiZW4iXSwiaHR0cHM6Ly9hdXRvbWF0aW9uZXhlcmNpc2UuY29tL3Byb2R1Y3RzIixudWxsLFtbOCwiTDdJU3hZYTFnemMiXSxbOSwidGgiXSxbMjMsIjE3MzkyNDMyMjAiXSxbMTksIjIiXSxbMTcsIlswXSJdLFsyNCwiYXV0b21hdGlvbmV4ZXJjaXNlLmNvbSJdXV0"&gt;&lt;/script&gt;&lt;meta http-equiv="origin-trial" content="AxjhRadLCARYRJawRjMjq4U8V8okQvSnrBIJWdMajuEkN3/DfVAcLcFhMVrUWnOXagwlI8dQD84FwJDGj9ohqAYAAABveyJvcmlnaW4iOiJodHRwczovL2dvb2dsZWFkc2VydmljZXMuY29tOjQ0MyIsImZlYXR1cmUiOiJGZXRjaExhdGVyQVBJIiwiZXhwaXJ5IjoxNzI1NDA3OTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"&gt;&lt;script async="" src="https://fundingchoicesmessages.google.com/f/AGSKWxVR7KKcV2JDK9nmJvOCgQjR6Yo6yRi36Me43tIfQMYsoQEuXY-ZXkZ4d8Hrg4iAomOjbyA1duHm9LvpUJem5oh76A988CpTrM9RhlCTkqsTxxUJ-c58CnXDhKAll8LWzJhyk95bhQ==?fccs=W1siQUtzUm9sX083UzR5M2lLZmZzbGpyQ1ktcE1zX25ZMnJ1NG94T2VKaW5tWGV5VjdyVm00LVVwZ25FdUo2bzRfZGZYS0FtenhOb1E3OGZEQWh2QlY4dmo0OTFZR01oQmNGa0xIbzVGWktPMG9JTTJWbXNtXzVfcWJZcERqTEptSjhqbXdRQkgzYU9yaW0zeFlxUmxfajcyVkstSTRKeHdVckVBPT0iXSxudWxsLG51bGwsbnVsbCxudWxsLG51bGwsWzE3MzkyNDMyMjMsNDkzMDAwMDAwXSxudWxsLG51bGwsbnVsbCxbbnVsbCxbNyw5LDZdLG51bGwsMixudWxsLCJlbiIsbnVsbCxudWxsLG51bGwsbnVsbCxudWxsLDFdLCJodHRwczovL2F1dG9tYXRpb25leGVyY2lzZS5jb20vcHJvZHVjdHMiLG51bGwsW1s4LCJMN0lTeFlhMWd6YyJdLFs5LCJ0aCJdLFsyMywiMTczOTI0MzIyMCJdLFsxOSwiMiJdLFsxNywiWzBdIl0sWzI0LCJhdXRvbWF0aW9uZXhlcmNpc2UuY29tIl1dXQ"&gt;&lt;/script&gt;&lt;/head&gt;
+
+&lt;body style="padding: 0px 0px 154px;"&gt;
+
+	&lt;header id="header"&gt;
+		&lt;div class="header-middle"&gt;
+			&lt;div class="container"&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="col-sm-4"&gt;
+						&lt;div class="logo pull-left"&gt;
+							&lt;a href="/"&gt;&lt;img src="/static/images/home/logo.png" alt="Website for automation practice"&gt;&lt;/a&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col-sm-8"&gt;
+						&lt;div class="shop-menu pull-right"&gt;
+							&lt;ul class="nav navbar-nav"&gt;
+								&lt;li&gt;&lt;a href="/"&gt;&lt;i class="fa fa-home"&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="/products" style="color: orange;"&gt;&lt;i class="material-icons card_travel" style="font-size: 16px;"&gt;&lt;/i&gt; Products&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="/view_cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt; Cart&lt;/a&gt;&lt;/li&gt;
+								
+								&lt;li&gt;&lt;a href="/login"&gt;&lt;i class="fa fa-lock"&gt;&lt;/i&gt; Signup / Login&lt;/a&gt;&lt;/li&gt;
+								
+								&lt;li&gt;&lt;a href="/test_cases"&gt;&lt;i class="fa fa-list"&gt;&lt;/i&gt; Test Cases&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="/api_list"&gt;&lt;i class="fa fa-list"&gt;&lt;/i&gt; API Testing&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="https://www.youtube.com/c/AutomationExercise"&gt;&lt;i class="fa fa-youtube-play"&gt;&lt;/i&gt; Video Tutorials&lt;/a&gt;&lt;/li&gt;
+								&lt;li&gt;&lt;a href="/contact_us"&gt;&lt;i class="fa fa-envelope"&gt;&lt;/i&gt; Contact us&lt;/a&gt;&lt;/li&gt;
+								
+							&lt;/ul&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/header&gt;
+	
+	&lt;section id="advertisement"&gt;
+		&lt;div class="container"&gt;
+			&lt;br&gt;
+			&lt;img src="/static/images/shop/sale.jpg" id="sale_image" alt="Website for practice"&gt;
+
+		  	&lt;input type="text" name="search" id="search_product" value="" placeholder="Search Product" class="form-control input-lg"&gt;
+			&lt;button type="button" id="submit_search" class="btn btn-default btn-lg"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+	
+	&lt;section style="height: auto !important;"&gt;
+		&lt;div class="container" style="height: auto !important;"&gt;
+			&lt;div class="row" style="height: auto !important;"&gt;
+				&lt;div class="col-sm-3" style="height: auto !important; min-height: 0px !important;"&gt;
+					&lt;div class="left-sidebar" style="height: auto !important;"&gt;
+						&lt;h2&gt;Category&lt;/h2&gt;
+						&lt;div class="panel-group category-products" id="accordian"&gt;
+							
+							&lt;div class="panel panel-default"&gt;
+								&lt;div class="panel-heading"&gt;
+									&lt;h4 class="panel-title"&gt;
+										&lt;a data-toggle="collapse" data-parent="#accordian" href="#Women"&gt;
+											&lt;span class="badge pull-right"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/span&gt;
+											Women
+										&lt;/a&gt;
+									&lt;/h4&gt;
+								&lt;/div&gt;
+								&lt;div id="Women" class="panel-collapse collapse"&gt;
+									&lt;div class="panel-body"&gt;
+										&lt;ul&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/1"&gt;Dress &lt;/a&gt;&lt;/li&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/2"&gt;Tops &lt;/a&gt;&lt;/li&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/7"&gt;Saree &lt;/a&gt;&lt;/li&gt;
+											
+										&lt;/ul&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							
+							&lt;div class="panel panel-default"&gt;
+								&lt;div class="panel-heading"&gt;
+									&lt;h4 class="panel-title"&gt;
+										&lt;a data-toggle="collapse" data-parent="#accordian" href="#Men"&gt;
+											&lt;span class="badge pull-right"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/span&gt;
+											Men
+										&lt;/a&gt;
+									&lt;/h4&gt;
+								&lt;/div&gt;
+								&lt;div id="Men" class="panel-collapse collapse"&gt;
+									&lt;div class="panel-body"&gt;
+										&lt;ul&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/3"&gt;Tshirts &lt;/a&gt;&lt;/li&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/6"&gt;Jeans &lt;/a&gt;&lt;/li&gt;
+											
+										&lt;/ul&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							
+							&lt;div class="panel panel-default"&gt;
+								&lt;div class="panel-heading"&gt;
+									&lt;h4 class="panel-title"&gt;
+										&lt;a data-toggle="collapse" data-parent="#accordian" href="#Kids"&gt;
+											&lt;span class="badge pull-right"&gt;&lt;i class="fa fa-plus"&gt;&lt;/i&gt;&lt;/span&gt;
+											Kids
+										&lt;/a&gt;
+									&lt;/h4&gt;
+								&lt;/div&gt;
+								&lt;div id="Kids" class="panel-collapse collapse"&gt;
+									&lt;div class="panel-body"&gt;
+										&lt;ul&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/4"&gt;Dress &lt;/a&gt;&lt;/li&gt;
+											
+											&lt;li&gt;&lt;a href="/category_products/5"&gt;Tops &amp;amp; Shirts &lt;/a&gt;&lt;/li&gt;
+											
+										&lt;/ul&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+							
+						&lt;/div&gt;&lt;div class="google-auto-placed" style="width: 100%; height: auto; clear: none; text-align: center;"&gt;&lt;ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1677597403311019" data-adsbygoogle-status="done" style="display: block; margin: 10px auto 35px; background-color: transparent; height: 0px;" data-ad-status="unfilled"&gt;&lt;div id="aswift_1_host" style="border: none; height: 0px; width: 263px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block; overflow: hidden; opacity: 0;"&gt;&lt;iframe id="aswift_1" name="aswift_1" browsingtopics="true" style="left: 0px; position: absolute; top: 0px; border: 0px; width: 263px; height: 0px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="263" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?gdpr=0&amp;amp;client=ca-pub-1677597403311019&amp;amp;output=html&amp;amp;h=600&amp;amp;adk=1963280680&amp;amp;adf=1292957221&amp;amp;pi=t.aa~a.3884009241~rp.4&amp;amp;w=263&amp;amp;abgtt=6&amp;amp;fwrn=4&amp;amp;fwrnh=100&amp;amp;lmt=1739243221&amp;amp;rafmt=1&amp;amp;to=qs&amp;amp;pwprc=4334590153&amp;amp;format=263x600&amp;amp;url=https%3A%2F%2Fautomationexercise.com%2Fproducts&amp;amp;fwr=0&amp;amp;pra=3&amp;amp;rpe=1&amp;amp;resp_fmts=4&amp;amp;wgl=1&amp;amp;fa=40&amp;amp;uach=WyJtYWNPUyIsIjEzLjcuMyIsIng4NiIsIiIsIjEzMy4wLjY5NDMuNTMiLG51bGwsMCxudWxsLCI2NCIsW1siTm90KEE6QnJhbmQiLCI5OS4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEzMy4wLjY5NDMuNTMiXSxbIkNocm9taXVtIiwiMTMzLjAuNjk0My41MyJdXSwwXQ..&amp;amp;dt=1739243221887&amp;amp;bpp=2&amp;amp;bdt=1997&amp;amp;idt=-M&amp;amp;shv=r20250206&amp;amp;mjsv=m202502060101&amp;amp;ptt=9&amp;amp;saldr=aa&amp;amp;abxe=1&amp;amp;cookie=ID%3D60d4d621845b2bc2%3AT%3D1739243220%3ART%3D1739243220%3AS%3DALNI_MYV9KeUWbobrliYJAl2nGqLCK6IKA&amp;amp;gpic=UID%3D000010305792ec7f%3AT%3D1739243220%3ART%3D1739243220%3AS%3DALNI_MY_-nQnhiEImrG96iJRj2rnn3S4jw&amp;amp;eo_id_str=ID%3D61a41000b536517f%3AT%3D1739243220%3ART%3D1739243220%3AS%3DAA-Afjb8PC9Ej13Nb3iQTYiUGqS-&amp;amp;prev_fmts=0x0&amp;amp;nras=2&amp;amp;correlator=6080074639862&amp;amp;frm=20&amp;amp;pv=1&amp;amp;u_tz=420&amp;amp;u_his=3&amp;amp;u_h=900&amp;amp;u_w=1440&amp;amp;u_ah=820&amp;amp;u_aw=1440&amp;amp;u_cd=24&amp;amp;u_sd=2&amp;amp;dmc=8&amp;amp;adx=150&amp;amp;ady=728&amp;amp;biw=1440&amp;amp;bih=681&amp;amp;scr_x=0&amp;amp;scr_y=0&amp;amp;eid=31089910%2C31090225%2C95350441%2C95352069%2C95347433&amp;amp;oid=2&amp;amp;pvsid=2136283273105893&amp;amp;tmod=1346279843&amp;amp;uas=0&amp;amp;nvt=1&amp;amp;ref=https%3A%2F%2Fautomationexercise.com%2F&amp;amp;fc=1920&amp;amp;brdim=0%2C25%2C0%2C25%2C1440%2C25%2C1440%2C820%2C1440%2C681&amp;amp;vis=1&amp;amp;rsz=%7C%7Cs%7C&amp;amp;abl=NS&amp;amp;fu=128&amp;amp;bc=31&amp;amp;bz=1&amp;amp;td=1&amp;amp;tdf=2&amp;amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;amp;nt=1&amp;amp;ifi=2&amp;amp;uci=a!2&amp;amp;btvi=1&amp;amp;fsb=1&amp;amp;dtd=104" data-google-container-id="a!2" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CJCIjvTRuosDFd2NrAIdEo8ZYA" data-load-complete="true"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/ins&gt;&lt;/div&gt;
+					
+						&lt;div class="brands_products"&gt;
+							&lt;h2&gt;Brands&lt;/h2&gt;
+							&lt;div class="brands-name"&gt;
+								&lt;ul class="nav nav-pills nav-stacked"&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Polo"&gt; &lt;span class="pull-right"&gt;(6)&lt;/span&gt;Polo&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/H&amp;amp;M"&gt; &lt;span class="pull-right"&gt;(5)&lt;/span&gt;H&amp;amp;M&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Madame"&gt; &lt;span class="pull-right"&gt;(5)&lt;/span&gt;Madame&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Mast &amp;amp; Harbour"&gt; &lt;span class="pull-right"&gt;(3)&lt;/span&gt;Mast &amp;amp; Harbour&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Babyhug"&gt; &lt;span class="pull-right"&gt;(4)&lt;/span&gt;Babyhug&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Allen Solly Junior"&gt; &lt;span class="pull-right"&gt;(3)&lt;/span&gt;Allen Solly Junior&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Kookie Kids"&gt; &lt;span class="pull-right"&gt;(3)&lt;/span&gt;Kookie Kids&lt;/a&gt;&lt;/li&gt;
+									
+									&lt;li&gt;&lt;a href="/brand_products/Biba"&gt; &lt;span class="pull-right"&gt;(5)&lt;/span&gt;Biba&lt;/a&gt;&lt;/li&gt;
+									
+								&lt;/ul&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+				&lt;div class="col-sm-9 padding-right"&gt;
+					&lt;div class="features_items"&gt;
+
+						
+						&lt;h2 class="title text-center"&gt;All Products&lt;/h2&gt;
+						
+
+						&lt;!-- Modal HTML --&gt;
+						&lt;div id="cartModal" class="modal fade"&gt;
+							&lt;div class="modal-dialog modal-confirm"&gt;
+								&lt;div class="modal-content"&gt;
+									&lt;div class="modal-header"&gt;
+										&lt;div class="icon-box"&gt;
+											&lt;i class="material-icons"&gt;&lt;/i&gt;
+										&lt;/div&gt;
+										&lt;h4 class="modal-title w-100"&gt;Added!&lt;/h4&gt;
+									&lt;/div&gt;
+									&lt;div class="modal-body"&gt;
+										&lt;p class="text-center"&gt;Your product has been added to cart.&lt;/p&gt;
+										&lt;p class="text-center"&gt;&lt;a href="/view_cart"&gt;&lt;u&gt;View Cart&lt;/u&gt;&lt;/a&gt;&lt;/p&gt;
+									&lt;/div&gt;
+									&lt;div class="modal-footer"&gt;
+										&lt;button class="btn btn-success close-modal btn-block" data-dismiss="modal"&gt;Continue Shopping&lt;/button&gt;
+									&lt;/div&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+
+
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/1" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 500&lt;/h2&gt;
+											&lt;p&gt;Blue Top&lt;/p&gt;
+											&lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 500&lt;/h2&gt;
+												&lt;p&gt;Blue Top&lt;/p&gt;
+												&lt;a data-product-id="1" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/1" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/2" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 400&lt;/h2&gt;
+											&lt;p&gt;Men Tshirt&lt;/p&gt;
+											&lt;a data-product-id="2" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 400&lt;/h2&gt;
+												&lt;p&gt;Men Tshirt&lt;/p&gt;
+												&lt;a data-product-id="2" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/2" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/3" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1000&lt;/h2&gt;
+											&lt;p&gt;Sleeveless Dress&lt;/p&gt;
+											&lt;a data-product-id="3" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1000&lt;/h2&gt;
+												&lt;p&gt;Sleeveless Dress&lt;/p&gt;
+												&lt;a data-product-id="3" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/3" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/4" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1500&lt;/h2&gt;
+											&lt;p&gt;Stylish Dress&lt;/p&gt;
+											&lt;a data-product-id="4" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1500&lt;/h2&gt;
+												&lt;p&gt;Stylish Dress&lt;/p&gt;
+												&lt;a data-product-id="4" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/4" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/5" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 600&lt;/h2&gt;
+											&lt;p&gt;Winter Top&lt;/p&gt;
+											&lt;a data-product-id="5" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 600&lt;/h2&gt;
+												&lt;p&gt;Winter Top&lt;/p&gt;
+												&lt;a data-product-id="5" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/5" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/6" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 400&lt;/h2&gt;
+											&lt;p&gt;Summer White Top&lt;/p&gt;
+											&lt;a data-product-id="6" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 400&lt;/h2&gt;
+												&lt;p&gt;Summer White Top&lt;/p&gt;
+												&lt;a data-product-id="6" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/6" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/7" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1000&lt;/h2&gt;
+											&lt;p&gt;Madame Top For Women&lt;/p&gt;
+											&lt;a data-product-id="7" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1000&lt;/h2&gt;
+												&lt;p&gt;Madame Top For Women&lt;/p&gt;
+												&lt;a data-product-id="7" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/7" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/8" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 700&lt;/h2&gt;
+											&lt;p&gt;Fancy Green Top&lt;/p&gt;
+											&lt;a data-product-id="8" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 700&lt;/h2&gt;
+												&lt;p&gt;Fancy Green Top&lt;/p&gt;
+												&lt;a data-product-id="8" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/8" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/11" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 499&lt;/h2&gt;
+											&lt;p&gt;Sleeves Printed Top - White&lt;/p&gt;
+											&lt;a data-product-id="11" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 499&lt;/h2&gt;
+												&lt;p&gt;Sleeves Printed Top - White&lt;/p&gt;
+												&lt;a data-product-id="11" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/11" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/12" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 359&lt;/h2&gt;
+											&lt;p&gt;Half Sleeves Top Schiffli Detailing - Pink&lt;/p&gt;
+											&lt;a data-product-id="12" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 359&lt;/h2&gt;
+												&lt;p&gt;Half Sleeves Top Schiffli Detailing - Pink&lt;/p&gt;
+												&lt;a data-product-id="12" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/12" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/13" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 278&lt;/h2&gt;
+											&lt;p&gt;Frozen Tops For Kids&lt;/p&gt;
+											&lt;a data-product-id="13" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 278&lt;/h2&gt;
+												&lt;p&gt;Frozen Tops For Kids&lt;/p&gt;
+												&lt;a data-product-id="13" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/13" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/14" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 679&lt;/h2&gt;
+											&lt;p&gt;Full Sleeves Top Cherry - Pink&lt;/p&gt;
+											&lt;a data-product-id="14" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 679&lt;/h2&gt;
+												&lt;p&gt;Full Sleeves Top Cherry - Pink&lt;/p&gt;
+												&lt;a data-product-id="14" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/14" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/15" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 315&lt;/h2&gt;
+											&lt;p&gt;Printed Off Shoulder Top - White&lt;/p&gt;
+											&lt;a data-product-id="15" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 315&lt;/h2&gt;
+												&lt;p&gt;Printed Off Shoulder Top - White&lt;/p&gt;
+												&lt;a data-product-id="15" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/15" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/16" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 478&lt;/h2&gt;
+											&lt;p&gt;Sleeves Top and Short - Blue &amp;amp; Pink&lt;/p&gt;
+											&lt;a data-product-id="16" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 478&lt;/h2&gt;
+												&lt;p&gt;Sleeves Top and Short - Blue &amp;amp; Pink&lt;/p&gt;
+												&lt;a data-product-id="16" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/16" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/18" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1200&lt;/h2&gt;
+											&lt;p&gt;Little Girls Mr. Panda Shirt&lt;/p&gt;
+											&lt;a data-product-id="18" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1200&lt;/h2&gt;
+												&lt;p&gt;Little Girls Mr. Panda Shirt&lt;/p&gt;
+												&lt;a data-product-id="18" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/18" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/19" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1050&lt;/h2&gt;
+											&lt;p&gt;Sleeveless Unicorn Patch Gown - Pink&lt;/p&gt;
+											&lt;a data-product-id="19" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1050&lt;/h2&gt;
+												&lt;p&gt;Sleeveless Unicorn Patch Gown - Pink&lt;/p&gt;
+												&lt;a data-product-id="19" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/19" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/20" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1190&lt;/h2&gt;
+											&lt;p&gt;Cotton Mull Embroidered Dress&lt;/p&gt;
+											&lt;a data-product-id="20" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1190&lt;/h2&gt;
+												&lt;p&gt;Cotton Mull Embroidered Dress&lt;/p&gt;
+												&lt;a data-product-id="20" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/20" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/21" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1530&lt;/h2&gt;
+											&lt;p&gt;Blue Cotton Indie Mickey Dress&lt;/p&gt;
+											&lt;a data-product-id="21" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1530&lt;/h2&gt;
+												&lt;p&gt;Blue Cotton Indie Mickey Dress&lt;/p&gt;
+												&lt;a data-product-id="21" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/21" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/22" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1600&lt;/h2&gt;
+											&lt;p&gt;Long Maxi Tulle Fancy Dress Up Outfits -Pink&lt;/p&gt;
+											&lt;a data-product-id="22" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1600&lt;/h2&gt;
+												&lt;p&gt;Long Maxi Tulle Fancy Dress Up Outfits -Pink&lt;/p&gt;
+												&lt;a data-product-id="22" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/22" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/23" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1100&lt;/h2&gt;
+											&lt;p&gt;Sleeveless Unicorn Print Fit &amp;amp; Flare Net Dress - Multi&lt;/p&gt;
+											&lt;a data-product-id="23" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1100&lt;/h2&gt;
+												&lt;p&gt;Sleeveless Unicorn Print Fit &amp;amp; Flare Net Dress - Multi&lt;/p&gt;
+												&lt;a data-product-id="23" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/23" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/24" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 849&lt;/h2&gt;
+											&lt;p&gt;Colour Blocked Shirt – Sky Blue&lt;/p&gt;
+											&lt;a data-product-id="24" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 849&lt;/h2&gt;
+												&lt;p&gt;Colour Blocked Shirt – Sky Blue&lt;/p&gt;
+												&lt;a data-product-id="24" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/24" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/28" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1299&lt;/h2&gt;
+											&lt;p&gt;Pure Cotton V-Neck T-Shirt&lt;/p&gt;
+											&lt;a data-product-id="28" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1299&lt;/h2&gt;
+												&lt;p&gt;Pure Cotton V-Neck T-Shirt&lt;/p&gt;
+												&lt;a data-product-id="28" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/28" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/29" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1000&lt;/h2&gt;
+											&lt;p&gt;Green Side Placket Detail T-Shirt&lt;/p&gt;
+											&lt;a data-product-id="29" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1000&lt;/h2&gt;
+												&lt;p&gt;Green Side Placket Detail T-Shirt&lt;/p&gt;
+												&lt;a data-product-id="29" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/29" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/30" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1500&lt;/h2&gt;
+											&lt;p&gt;Premium Polo T-Shirts&lt;/p&gt;
+											&lt;a data-product-id="30" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1500&lt;/h2&gt;
+												&lt;p&gt;Premium Polo T-Shirts&lt;/p&gt;
+												&lt;a data-product-id="30" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/30" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/31" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 850&lt;/h2&gt;
+											&lt;p&gt;Pure Cotton Neon Green Tshirt&lt;/p&gt;
+											&lt;a data-product-id="31" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 850&lt;/h2&gt;
+												&lt;p&gt;Pure Cotton Neon Green Tshirt&lt;/p&gt;
+												&lt;a data-product-id="31" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/31" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/33" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 799&lt;/h2&gt;
+											&lt;p&gt;Soft Stretch Jeans&lt;/p&gt;
+											&lt;a data-product-id="33" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 799&lt;/h2&gt;
+												&lt;p&gt;Soft Stretch Jeans&lt;/p&gt;
+												&lt;a data-product-id="33" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/33" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/35" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1200&lt;/h2&gt;
+											&lt;p&gt;Regular Fit Straight Jeans&lt;/p&gt;
+											&lt;a data-product-id="35" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1200&lt;/h2&gt;
+												&lt;p&gt;Regular Fit Straight Jeans&lt;/p&gt;
+												&lt;a data-product-id="35" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/35" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/37" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1400&lt;/h2&gt;
+											&lt;p&gt;Grunt Blue Slim Fit Jeans&lt;/p&gt;
+											&lt;a data-product-id="37" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1400&lt;/h2&gt;
+												&lt;p&gt;Grunt Blue Slim Fit Jeans&lt;/p&gt;
+												&lt;a data-product-id="37" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/37" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/38" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 2300&lt;/h2&gt;
+											&lt;p&gt;Rose Pink Embroidered Maxi Dress&lt;/p&gt;
+											&lt;a data-product-id="38" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 2300&lt;/h2&gt;
+												&lt;p&gt;Rose Pink Embroidered Maxi Dress&lt;/p&gt;
+												&lt;a data-product-id="38" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/38" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/39" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 3000&lt;/h2&gt;
+											&lt;p&gt;Cotton Silk Hand Block Print Saree&lt;/p&gt;
+											&lt;a data-product-id="39" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 3000&lt;/h2&gt;
+												&lt;p&gt;Cotton Silk Hand Block Print Saree&lt;/p&gt;
+												&lt;a data-product-id="39" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/39" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/40" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 3500&lt;/h2&gt;
+											&lt;p&gt;Rust Red Linen Saree&lt;/p&gt;
+											&lt;a data-product-id="40" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 3500&lt;/h2&gt;
+												&lt;p&gt;Rust Red Linen Saree&lt;/p&gt;
+												&lt;a data-product-id="40" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/40" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/41" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 5000&lt;/h2&gt;
+											&lt;p&gt;Beautiful Peacock Blue Cotton Linen Saree&lt;/p&gt;
+											&lt;a data-product-id="41" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 5000&lt;/h2&gt;
+												&lt;p&gt;Beautiful Peacock Blue Cotton Linen Saree&lt;/p&gt;
+												&lt;a data-product-id="41" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/41" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/42" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1400&lt;/h2&gt;
+											&lt;p&gt;Lace Top For Women&lt;/p&gt;
+											&lt;a data-product-id="42" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1400&lt;/h2&gt;
+												&lt;p&gt;Lace Top For Women&lt;/p&gt;
+												&lt;a data-product-id="42" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/42" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+						&lt;div class="col-sm-4"&gt;
+							&lt;div class="product-image-wrapper"&gt;
+								&lt;div class="single-products"&gt;
+										&lt;div class="productinfo text-center"&gt;
+											&lt;img src="/get_product_picture/43" alt="ecommerce website products"&gt;
+											&lt;h2&gt;Rs. 1389&lt;/h2&gt;
+											&lt;p&gt;GRAPHIC DESIGN MEN T SHIRT - BLUE&lt;/p&gt;
+											&lt;a data-product-id="43" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+										&lt;/div&gt;
+										&lt;div class="product-overlay"&gt;
+											&lt;div class="overlay-content"&gt;
+												&lt;h2&gt;Rs. 1389&lt;/h2&gt;
+												&lt;p&gt;GRAPHIC DESIGN MEN T SHIRT - BLUE&lt;/p&gt;
+												&lt;a data-product-id="43" class="btn btn-default add-to-cart"&gt;&lt;i class="fa fa-shopping-cart"&gt;&lt;/i&gt;Add to cart&lt;/a&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+								&lt;/div&gt;
+								&lt;div class="choose"&gt;
+									&lt;ul class="nav nav-pills nav-justified"&gt;
+										&lt;li&gt;&lt;a href="/product_details/43" style="color: brown;"&gt;&lt;i class="fa fa-plus-square"&gt;&lt;/i&gt;View Product&lt;/a&gt;&lt;/li&gt;
+									&lt;/ul&gt;
+								&lt;/div&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+						
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+	
+	&lt;div class="google-auto-placed" style="width: 100%; height: auto; clear: none; text-align: center;"&gt;&lt;ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-1677597403311019" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 280px;"&gt;&lt;div id="aswift_2_host" style="border: none; height: 280px; width: 1200px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"&gt;&lt;/div&gt;&lt;/ins&gt;&lt;/div&gt;&lt;footer id="footer"&gt;
+		&lt;div class="footer-widget"&gt;
+			&lt;div class="container"&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="form-row"&gt;
+						&lt;div class="col-md-9 hide form-group" id="success-subscribe"&gt;
+							&lt;div class="alert-success alert"&gt;You have been successfully subscribed!&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+					&lt;div class="col-sm-3 col-sm-offset-1"&gt;
+						&lt;div class="single-widget"&gt;
+							&lt;h2&gt;Subscription&lt;/h2&gt;
+							&lt;form class="searchform" method="POST"&gt;
+								&lt;input type="hidden" name="csrfmiddlewaretoken" value="1I9nQAGTXbCvV6Zhe27Kyv7rQPGFx1KTbCsBsSnSV4bw1pD69MFgwTinp435K9Tn"&gt;
+								&lt;input type="email" id="susbscribe_email" required="" placeholder="Your email address"&gt;
+								&lt;button type="submit" id="subscribe" class="btn btn-default"&gt;&lt;i class="fa fa-arrow-circle-o-right"&gt;&lt;/i&gt;&lt;/button&gt;
+								&lt;p&gt;Get the most recent updates from &lt;br&gt;our site and be updated your self...&lt;/p&gt;
+							&lt;/form&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="footer-bottom"&gt;
+			&lt;div class="container"&gt;
+				&lt;div class="row"&gt;
+					&lt;p class="pull-left"&gt;Copyright © 2021 All rights reserved&lt;/p&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/footer&gt;
+	
+
+  
+    &lt;script src="/static/js/jquery.js"&gt;&lt;/script&gt;
+    &lt;ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"&gt;&lt;div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"&gt;&lt;iframe id="aswift_0" name="aswift_0" browsingtopics="true" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1677597403311019&amp;amp;output=html&amp;amp;adk=1812271804&amp;amp;adf=3025194257&amp;amp;abgtt=6&amp;amp;lmt=1739243220&amp;amp;plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&amp;amp;format=0x0&amp;amp;url=https%3A%2F%2Fautomationexercise.com%2Fproducts&amp;amp;pra=5&amp;amp;wgl=1&amp;amp;aihb=0&amp;amp;asro=0&amp;amp;ailel=1~2~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;amp;aiael=1~2~3~4~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&amp;amp;aicel=33~38&amp;amp;aifxl=29_18~30_19&amp;amp;aiixl=29_5~30_6&amp;amp;aiapm=0.15&amp;amp;aiapmi=0.33938&amp;amp;aiescf=1&amp;amp;uach=WyJtYWNPUyIsIjEzLjcuMyIsIng4NiIsIiIsIjEzMy4wLjY5NDMuNTMiLG51bGwsMCxudWxsLCI2NCIsW1siTm90KEE6QnJhbmQiLCI5OS4wLjAuMCJdLFsiR29vZ2xlIENocm9tZSIsIjEzMy4wLjY5NDMuNTMiXSxbIkNocm9taXVtIiwiMTMzLjAuNjk0My41MyJdXSwwXQ..&amp;amp;dt=1739243219987&amp;amp;bpp=66&amp;amp;bdt=96&amp;amp;idt=111&amp;amp;shv=r20250206&amp;amp;mjsv=m202502060101&amp;amp;ptt=9&amp;amp;saldr=aa&amp;amp;abxe=1&amp;amp;cookie=ID%3D60d4d621845b2bc2%3AT%3D1739243220%3ART%3D1739243220%3AS%3DALNI_MYV9KeUWbobrliYJAl2nGqLCK6IKA&amp;amp;gpic=UID%3D000010305792ec7f%3AT%3D1739243220%3ART%3D1739243220%3AS%3DALNI_MY_-nQnhiEImrG96iJRj2rnn3S4jw&amp;amp;eo_id_str=ID%3D61a41000b536517f%3AT%3D1739243220%3ART%3D1739243220%3AS%3DAA-Afjb8PC9Ej13Nb3iQTYiUGqS-&amp;amp;nras=1&amp;amp;correlator=6080074639862&amp;amp;frm=20&amp;amp;pv=2&amp;amp;u_tz=420&amp;amp;u_his=3&amp;amp;u_h=900&amp;amp;u_w=1440&amp;amp;u_ah=820&amp;amp;u_aw=1440&amp;amp;u_cd=24&amp;amp;u_sd=2&amp;amp;dmc=8&amp;amp;adx=-12245933&amp;amp;ady=-12245933&amp;amp;biw=1440&amp;amp;bih=681&amp;amp;scr_x=0&amp;amp;scr_y=0&amp;amp;eid=31089910%2C31090225%2C95350441%2C95352069%2C95347433&amp;amp;oid=2&amp;amp;pvsid=2136283273105893&amp;amp;tmod=1346279843&amp;amp;uas=0&amp;amp;nvt=1&amp;amp;fsapi=1&amp;amp;ref=https%3A%2F%2Fautomationexercise.com%2F&amp;amp;fc=1920&amp;amp;brdim=0%2C25%2C0%2C25%2C1440%2C25%2C1440%2C820%2C1440%2C681&amp;amp;vis=1&amp;amp;rsz=%7C%7Cs%7C&amp;amp;abl=NS&amp;amp;fu=32768&amp;amp;bc=31&amp;amp;bz=1&amp;amp;td=1&amp;amp;tdf=2&amp;amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;amp;nt=1&amp;amp;ifi=1&amp;amp;uci=a!1&amp;amp;fsb=1&amp;amp;dtd=334" data-google-container-id="a!1" tabindex="0" title="Advertisement" aria-label="Advertisement" data-load-complete="true"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/ins&gt;&lt;script src="/static/js/jquery.scrollUp.min.js"&gt;&lt;/script&gt;
+	&lt;script src="/static/js/bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="/static/js/jquery.prettyPhoto.js"&gt;&lt;/script&gt;
+    &lt;script src="/static/js/main.js"&gt;&lt;/script&gt;
+	&lt;script src="/static/js/cart.js"&gt;&lt;/script&gt;
+	&lt;script src="/static/js/subscription.js"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript"&gt;
+		$("#submit_search").on("click", function() {
+			var search = document.getElementById("search_product").value;
+			window.location = '/products?search=' + search;
+		});
+	&lt;/script&gt;
+
+&lt;a id="scrollUp" href="#top" style="display: none; position: fixed; z-index: 2147483647;"&gt;&lt;i class="fa fa-angle-up"&gt;&lt;/i&gt;&lt;/a&gt;&lt;iframe name="googlefcPresent" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"&gt;&lt;/iframe&gt;&lt;ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" data-anchor-status="displayed" data-ad-status="filled" data-anchor-shown="true" style="display: block; width: 100% !important; height: 129px !important; bottom: 0px; clear: none !important; float: none !important; left: 0px; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1; overflow: visible !important; padding: 0px !important; position: fixed; right: auto !important; top: auto !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647; background: rgb(250, 250, 250) !important;"&gt;&lt;div class="grippy-host"&gt;&lt;/div&gt;&lt;div id="aswift_3_host" style="border: none !important; height: 124px !important; width: 100% !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"&gt;&lt;iframe id="aswift_3" name="aswift_3" browsingtopics="true" style="width: 1005px !important; height: 124px !important; display: block; margin: 0px auto;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="1005" height="124" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allow="attribution-reporting; run-ad-auction" src="https://googleads.g.doubleclick.net/pagead/html/r20250206/r20190131/zrt_lookup_fy2021.html#RS-0-&amp;amp;adk=1812271801&amp;amp;client=ca-pub-1677597403311019&amp;amp;fa=1&amp;amp;ifi=4&amp;amp;uci=a!4&amp;amp;btvi=2" data-google-container-id="a!4" tabindex="0" title="Advertisement" aria-label="Advertisement" data-google-query-id="CPznqPPRuosDFeSKrAIdMKUZAg" data-load-complete="true"&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;/ins&gt;&lt;iframe name="__tcfapiLocator" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"&gt;&lt;/iframe&gt;&lt;iframe name="googlefcInactive" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"&gt;&lt;/iframe&gt;&lt;iframe name="googlefcLoaded" src="about:blank" style="display: none; width: 0px; height: 0px; border: none; z-index: -1000; left: -1000px; top: -1000px;"&gt;&lt;/iframe&gt;&lt;iframe src="https://ep2.adtrafficquality.google/sodar/sodar2/232/runner.html" width="0" height="0" style="display: none;"&gt;&lt;/iframe&gt;&lt;iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"&gt;&lt;/iframe&gt;&lt;/body&gt;&lt;iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20250206/r20190131/zrt_lookup_fy2021.html" style="display: none;"&gt;&lt;/iframe&gt;&lt;/html&gt;</msg>
+<doc>Logs and returns the HTML source of the current page or frame.</doc>
+<status status="PASS" start="2025-02-11T10:07:05.672748" elapsed="0.870865"/>
 </kw>
-<kw name="Should Contain" owner="BuiltIn">
-<msg time="2025-02-11T10:05:00.516678" level="FAIL">'CATEGORY' does not contain 'All Products'</msg>
-<arg>${page_text}</arg>
-<arg>All Products</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="FAIL" start="2025-02-11T10:05:00.516284" elapsed="0.000661">'CATEGORY' does not contain 'All Products'</status>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:07:06.577112" level="INFO">Element 'xpath=//h2[contains(text(),'Products')]' is displayed.</msg>
+<arg>xpath=//h2[contains(text(),'Products')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:07:06.543971" elapsed="0.033318"/>
 </kw>
-<status status="FAIL" start="2025-02-11T10:05:00.323038" elapsed="0.194129">'CATEGORY' does not contain 'All Products'</status>
+<status status="PASS" start="2025-02-11T10:07:03.670541" elapsed="2.906952"/>
 </kw>
 <kw name="Search Product">
-<status status="NOT RUN" start="2025-02-11T10:05:00.517519" elapsed="0.000072"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="search_product"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:07:06.578557" elapsed="0.043139"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:07:06.622562" level="INFO">Typing text 'blue' into text field 'xpath=//*[@id="search_product"]'.</msg>
+<arg>xpath=//*[@id="search_product"]</arg>
+<arg>${SEARCH_TERM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:07:06.622029" elapsed="0.518096"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:07:07.140906" level="INFO">Clicking button 'xpath=//*[@id="submit_search"]'.</msg>
+<arg>xpath=//*[@id="submit_search"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:07:07.140496" elapsed="3.733114"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:07:06.578001" elapsed="4.295781"/>
 </kw>
 <kw name="Verify Searched Products">
-<status status="NOT RUN" start="2025-02-11T10:05:00.517840" elapsed="0.000116"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Searched Products</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-11T10:07:10.875052" elapsed="0.051807"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:07:11.488496" level="INFO">Element 'xpath=//h2[contains(text(),'Searched Products')]' is displayed.</msg>
+<arg>xpath=//h2[contains(text(),'Searched Products')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:07:10.927793" elapsed="0.560847"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:07:10.874611" elapsed="0.614174"/>
 </kw>
 <kw name="Click On First Product">
-<status status="NOT RUN" start="2025-02-11T10:05:00.518349" elapsed="0.000058"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:07:17.485931" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-11T10:07:17.486668" level="FAIL">Element 'xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a' not visible after 5 seconds.</msg>
+<arg>xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-02-11T10:07:11.489606" elapsed="6.008711">Element 'xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-11T10:07:17.503085" elapsed="0.000087"/>
+</kw>
+<status status="FAIL" start="2025-02-11T10:07:11.489139" elapsed="6.014341">Element 'xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a' not visible after 5 seconds.</status>
 </kw>
 <kw name="Add Products To Cart">
-<status status="NOT RUN" start="2025-02-11T10:05:00.518778" elapsed="0.000080"/>
+<status status="NOT RUN" start="2025-02-11T10:07:17.503849" elapsed="0.000065"/>
 </kw>
 <kw name="Verify Products In Cart">
-<status status="NOT RUN" start="2025-02-11T10:05:00.519526" elapsed="0.000108"/>
+<status status="NOT RUN" start="2025-02-11T10:07:17.504201" elapsed="0.000050"/>
 </kw>
 <kw name="Login And Verify Cart">
-<status status="NOT RUN" start="2025-02-11T10:05:00.520808" elapsed="0.000087"/>
+<status status="NOT RUN" start="2025-02-11T10:07:17.504656" elapsed="0.000058"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-02-11T10:05:00.521330" elapsed="0.000066"/>
+<status status="NOT RUN" start="2025-02-11T10:07:17.504920" elapsed="0.000059"/>
 </kw>
-<status status="FAIL" start="2025-02-11T10:04:37.167575" elapsed="23.354246">'CATEGORY' does not contain 'All Products'</status>
+<status status="FAIL" start="2025-02-11T10:06:34.223230" elapsed="43.282258">Element 'xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a' not visible after 5 seconds.</status>
 </test>
-<status status="FAIL" start="2025-02-11T10:04:36.695267" elapsed="23.827458"/>
+<status status="FAIL" start="2025-02-11T10:06:33.831397" elapsed="43.675353"/>
 </suite>
 <statistics>
 <total>

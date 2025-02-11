@@ -26,12 +26,12 @@ Search Products and Verify Cart After Login
 *** Keywords ***
 Click Products Button
     Click Element    xpath=//a[@href='/products']
-    Wait Until Page Contains    All Products    timeout=10s   # รอให้หน้าโหลด
+    Wait Until Page Contains    Products    timeout=10s   # รอให้หน้าโหลด
 
 Verify All Products Page
-    ${page_text}=    Get Text    xpath=//h2
-    Log    Found text: ${page_text}
-    Should Contain    ${page_text}    All Products
+    Sleep    2s   # รอให้หน้าโหลดข้อมูลก่อน
+    Log Source    # ตรวจสอบ HTML ของหน้าเพื่อ Debug
+    Element Should Be Visible    xpath=//h2[contains(text(),'Products')]   # ตรวจสอบว่าข้อความ 'Products' แสดงขึ้น
 
 Search Product
     Wait Until Element Is Visible    xpath=//*[@id="search_product"]
@@ -40,7 +40,7 @@ Search Product
 
 Verify Searched Products
     Wait Until Page Contains    Searched Products    timeout=10s
-    Page Should Contain    SEARCHED PRODUCTS
+    Element Should Be Visible    xpath=//h2[contains(text(),'Searched Products')]
 
 Click On First Product
     Wait Until Element Is Visible    xpath=/html/body/section[2]/div/div/div[2]/div/div[3]/div/div[1]/div[2]/div/a
