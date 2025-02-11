@@ -34,8 +34,9 @@ Verify All Products Page
     Should Contain    ${page_text}    All Products
 
 Search Product
-    Input Text    xpath=//input[@id='search_product']    ${SEARCH_TERM}
-    Click Button    xpath=//button[@id='submit_search']
+    Wait Until Element Is Visible    xpath=//*[@id="search_product"]
+    Input Text    xpath=//*[@id="search_product"]    ${SEARCH_TERM}
+    Click Button    xpath=//*[@id="submit_search"]
 
 Verify Searched Products
     Wait Until Page Contains    Searched Products    timeout=10s
